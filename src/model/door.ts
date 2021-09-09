@@ -1,12 +1,12 @@
 import { createPortal } from "react-dom"
 
-export default class Door {
-    #number
-    #haveGift
-    #selected
-    #open
+export default class DoorModel {
+    #number: number
+    #haveGift: boolean
+    #selected: boolean
+    #open: boolean
 
-    constructor(number, haveGift = false, selected = false, open = false) {
+    constructor(number: number, haveGift = false, selected = false, open = false) {
         this.#number = number
         this.#haveGift = haveGift
         this.#selected = selected
@@ -31,17 +31,17 @@ export default class Door {
 
     deselect() {
         const selected = false
-        return new Porta(this.number, this.haveGift, selected, this.open)        
+        return new DoorModel(this.number, this.haveGift, selected, this.open)        
     }
 
     toggleSelection() {
         const selected = !this.#selected
-        return new Porta(this.number, this.haveGift, selected, this.open)
+        return new DoorModel(this.number, this.haveGift, selected, this.open)
     }
 
     openTheDoor() {
         const open = true
-        return new Porta(this.number, this.haveGift, this.selected, open)
+        return new DoorModel(this.number, this.haveGift, this.selected, open)
     }
 
 }
