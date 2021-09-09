@@ -1,5 +1,3 @@
-import { createPortal } from "react-dom"
-
 export default class DoorModel {
     #number: number
     #haveGift: boolean
