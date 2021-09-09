@@ -1,9 +1,10 @@
-import Gift from "../components/gift";
+// import Gift from "../components/gift";
+import Door from "../components/Door";
 
 export default function Home() {
   return (
     <div>
-      <Gift/>
+      <Door/>
     </div>
   )
 }
